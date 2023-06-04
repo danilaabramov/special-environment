@@ -166,11 +166,12 @@ a > .logo {
 }
 
 .top-active-mobile-buttons {
-    width: 100vw;
     justify-content: center;
     display: flex;
     opacity: 0;
     background: #3487AF;
+    height: calc(100vh - 211px);
+    overflow: scroll;
 }
 
 .form__input-container {
@@ -488,7 +489,7 @@ a > .logo {
 
     .active-header {
         position: fixed;
-        overflow: scroll;
+        overflow: hidden;
         height: 100vh;
         transition: height 1s;
         background: #fff;

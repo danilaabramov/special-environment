@@ -21,10 +21,12 @@ export default function App() {
         setActiveBar(a => !a);
     }
 
-    return (<div className='App'>
+    return (<div className='App' style={{
+        overflow: activeBar && windowWidth <= 820 ? 'hidden' : '',
+        height: activeBar && windowWidth <= 820 ? '100vh' : ''
+    }}>
         <header>
             <div className={activeBar ? 'active-header' : 'header'}>
-
                 <div>
                     <div className='left-header-container'>
                         <Link to='/' onClick={() => setActiveBar(false)}>
